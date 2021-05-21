@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Timer from "./components/Timer";
+import ActivityList from "./components/ActivityList";
+import { Col, Container, Row } from "react-bootstrap";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          Vaccine Exercise Program
+        </h1>
       </header>
+      <section>
+        <Container fluid>
+          <Row>
+            <Col lg={3}>
+              <Timer/>
+            </Col>
+            <Col lg={true}>
+              <ActivityList />
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </div>
   );
 }
